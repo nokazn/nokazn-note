@@ -1,0 +1,24 @@
+{
+  "name": "nokazn-notes",
+  "version": "1.0.0",
+  "description": "nokazn's notes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "src:dev": "vuepress dev src",
+    "src:build": "vuepress build src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nokazn/nokazn-notes.git"
+  },
+  "author": "nokazn",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nokazn/nokazn-notes/issues"
+  },
+  "homepage": "https://github.com/nokazn/nokazn-notes#readme",
+  "dependencies": {
+    "vuepress": "^1.2.0"
+  }
+}
