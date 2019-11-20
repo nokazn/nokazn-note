@@ -1,6 +1,9 @@
-# tips
+# 概要
 
-## JavaSctript
+メモを書き溜めていきます。
 
-- [undefined](/tips/javascript/undefined.md)
-- [型の判定](/tips/javascript/型の判定.md)
+## tips
+
+### JavaSctript
+
+<page-list parent="/tips/javascript" />

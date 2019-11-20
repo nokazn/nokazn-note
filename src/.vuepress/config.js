@@ -8,8 +8,16 @@ module.exports = {
     lineNumbers: true
   },
   plugins: [
-    ['@vuepress/back-to-top', true],
-    ['@vuepress/last-updated']
+    '@vuepress/back-to-top',
+    [
+      '@vuepress/last-updated',
+      {
+        transformer (time) {
+          const moment = require('moment-timezone').tz.setDefault('Asia/Tokyo');
+          return moment(time).format('YYYY-M-D H:mm');
+        }
+      }
+    ]
   ],
   themeConfig: {
     lastUpdated: 'Last Updated',
@@ -22,7 +30,7 @@ module.exports = {
     ],
     sidebar: [
       '/',
-      '/tips/javascript/undefined',
+      '/tips/javascript/undefinedについて',
       '/tips/javascript/型の判定',
     ],
     smoothScroll: true
