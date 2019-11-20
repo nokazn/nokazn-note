@@ -1,4 +1,4 @@
-# `undefinedについて`
+# `undefined`について
 
 ## はじめに
 
