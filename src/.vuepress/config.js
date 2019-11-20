@@ -22,7 +22,8 @@ module.exports = {
     ],
     sidebar: [
       '/',
-      '/tips/javascript/undefined'
+      '/tips/javascript/undefined',
+      '/tips/javascript/型の判定',
     ],
     smoothScroll: true
   }

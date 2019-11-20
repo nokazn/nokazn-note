@@ -23,7 +23,7 @@ console.log(undefined);  //=> "Hello!"
 対して、`void`演算子は任意の引数をとって常に`undefined`を返すため、安全性が保たれる。
 
 ```js
-console.log(void 0);  // => undefined
+console.log(void 0);           // => undefined
 console.log(void 'hogehoge');  // => undefined
 ```
 
@@ -31,14 +31,15 @@ console.log(void 'hogehoge');  // => undefined
 
 ES5 以降では`undefined`は書き換え不可となった。
 
-> モダンブラウザ (JavaScript 1.8.5 / Firefox 4 以降) での undefined は、ECMAScript 5 仕様により、設定不可、書込不可のプロパティとなります。そうでない場合でも、上書きは避けてください。  
+> モダンブラウザ (JavaScript 1.8.5 / Firefox 4 以降) での undefined は、ECMAScript 5 仕様により、設定不可、書込不可のプロパティとなります。そうでない場合でも、上書きは避けてください。
+
 [undefined - JavaScript \| MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/undefined)
 
 直接`undefined`を指定するか、値を代入せず宣言のみにした場合に変数は`undefined`を返す。
 
 ```js
 const x = undefined;  // undefined
-let y;  // undefined
+let y;                // undefined
 ```
 
 ## `undefned`の評価
@@ -65,11 +66,11 @@ console.log(x === undefined);  // Uncaught ReferenceError: x is not difined
 ```js
 const x = null;
 console.log(x == undefined);  // => true
-console.log(x == null);  // => true
+console.log(x == null);       // => true
 
 const y = undefined;
 console.log(y == undefined);  // => true
-console.log(y == null);  // => true
+console.log(y == null);       // => true
 ```
 
 ```js
@@ -116,8 +117,8 @@ const obj = {
 };
 console.log(obj.hasOwnProperty('hoge'));  // => true
 console.log(obj.hasOwnProperty('fuga'));  // => false
-console.log('hoge' in obj);  // => true
-console.log('fuga' in obj);  // => false
+console.log('hoge' in obj);               // => true
+console.log('fuga' in obj);               // => false
 ```
 
 ### 配列の`empty`
@@ -130,6 +131,8 @@ new Array(3);  // [empty × 3]
 
 これは値としての`undefined`ではなく、配列オブジェクトでインデックスに対応したプロパティが存在しないことを表している。
 
+その他にも、値を指定せずカンマ`,`を連続で入れたり、`Array#length`以上のインデックスに値を代入したり、要素を削除したりすると`empty`が発生する。
+
 ```js
 const list = [,, 1, 2, 3];
 list[10] = 4;
@@ -137,13 +140,10 @@ delete list [3];
 console.log(list);  // => [empty × 2, 1, empty, 3, empty × 5, 4]
 ```
 
-その他にも、値を指定せずカンマ`,`を連続で入れたり、`Array#length`以上のインデックスに値を代入したり、要素を削除したりすると`empty`が発生する。
-
-
 ```js
 const list = new Array(3);
 list[0] = undefined;
-console.log(list);  // => [undefined, empty × 2]
+console.log(list);     // => [undefined, empty × 2]
 console.log(list[0]);  // => undefined
 console.log(list[1]);  // => undefined
 console.log(list[2]);  // => undefined
@@ -161,9 +161,10 @@ list.forEach((ele, index) => {
   console.log({ index, ele });
 });
 // => {index: 0, ele: undefined}
+// index が 1, 2 の場合はスキップされる
 ```
 
-長さを指定した配列を生成して、値を埋めたい場合は`for`で対処するか、`Array#fill()`を使う。
+長さを指定した配列を生成して値を埋めたい場合は`for`で対処するか、`Array#fill()`を使う。
 
 ```js
 new Array(3).fill(1);  // [1, 1, 1]
