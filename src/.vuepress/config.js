@@ -4,9 +4,6 @@ module.exports = {
   dest: 'docs/',
   base: '/nokazn-notes/',
   lang: 'ja-JP',
-  markdown: {
-    lineNumbers: true
-  },
   plugins: [
     '@vuepress/back-to-top',
     [
@@ -30,9 +27,27 @@ module.exports = {
     ],
     sidebar: [
       '/',
-      '/tips/javascript/undefinedについて',
-      '/tips/javascript/型の判定',
+      {
+        title: 'JavaScript',
+        children: [
+          '/javascript/undefined/',
+          '/javascript/checking-type/'
+        ]
+      },
+      {
+        title: 'Vue.js',
+        children: [
+          '/vuejs/boilerplate/'
+        ]
+      // },
+      // {
+      //   title: 'Web',
+      //   children: [
+      //     '/web/service-worker-pwa/'    
+      //   ]
+      }
     ],
+    sidebarDepth: 2,
     smoothScroll: true
   }
 }

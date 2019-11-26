@@ -16,6 +16,9 @@ export default {
       required: true
     }
   },
+  mounted () {
+    console.log(this.$site)
+  },
   computed: {
     pages () {
       return this.$site.pages
