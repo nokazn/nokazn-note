@@ -2,8 +2,14 @@
 
 メモを書き溜めていきます。
 
-## tips
+## JavaSctript
 
-### JavaSctript
+<page-list parent="/javascript" />
 
-<page-list parent="/tips/javascript" />
+## Vue.js
+
+<page-list parent="/vuejs" />
+
+<!-- ## Web -->
+
+<!-- <page-list parent="/web" /> -->
