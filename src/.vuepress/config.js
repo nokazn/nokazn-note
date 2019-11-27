@@ -1,8 +1,8 @@
 module.exports = {
-  title: 'nokazn\'s Notes',
+  title: '@nokazn/notes',
   description: 'nokazn のメモ',
   dest: 'docs/',
-  base: '/nokazn-notes/',
+  base: '/notes/',
   lang: 'ja-JP',
   plugins: [
     '@vuepress/back-to-top',
@@ -18,13 +18,8 @@ module.exports = {
   ],
   themeConfig: {
     lastUpdated: 'Last Updated',
-    nav: [
-      {
-        text: 'GitHub',
-        link: 'https://github.com/nokazn',
-        target: '_blank'
-      }
-    ],
+    repo: 'nokazn/notes',
+    repoLabel: 'GitHub',
     sidebar: [
       '/',
       {

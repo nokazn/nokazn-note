@@ -1,0 +1,33 @@
+navbar-blue = #495b70
+background-white = #fafafa
+
+scroll-bar()
+  &::-webkit-scrollbar
+    width: 8px;
+  &::-webkit-scrollbar-track
+    background-color: #f3f3f3;
+    border-radius: 8px;
+  &::-webkit-scrollbar-thumb
+    background-color: #d3d3d3;
+    border-radius: 8px;
+
+body
+  scroll-bar()
+.theme-container
+  background-color background-white
+  .navbar
+    background-color navbar-blue
+    border-bottom 1px solid navbar-blue
+    .site-name
+      color white
+    .links
+      background-color navbar-blue
+      .nav-links a,
+      .nav-links a:hover
+        color white
+  .sidebar
+    background-color background-white
+    scroll-bar()
+.tip,
+.custom-block.tip
+  border-color: #6a89cc
